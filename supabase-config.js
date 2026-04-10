@@ -6,10 +6,8 @@ const SUPABASE_CONFIG = {
   PROJECT_ID: 'mmssdzjrwrhootmccnyq',
   PROJECT_URL: 'https://mmssdzjrwrhootmccnyq.supabase.co',
   API_URL: 'https://mmssdzjrwrhootmccnyq.supabase.co',
-  // Nota: As chaves de API devem ser obtidas do Supabase Dashboard
-  // Settings > API Keys > Project API keys
-  // ANON_KEY: 'eyJ...', // Chave pública para uso no frontend
-  // SERVICE_ROLE_KEY: 'eyJ...', // Chave privada (não usar no frontend)
+  ANON_KEY: 'sb_publishable_MNgsgovbrDeWXPAjT8WLMA_0c3rjdkS',
+  // SERVICE_ROLE_KEY nunca no frontend
 };
 
 // Função para inicializar o Supabase
