@@ -1,4 +1,4 @@
-const CACHE_NAME = 'gabriel-bolsa-v1';
+const CACHE_NAME = 'gabriel-bolsa-v2';
 const ASSETS_TO_CACHE = [
   '/gabriel-bolsa-guide/',
   '/gabriel-bolsa-guide/index.html',
@@ -37,40 +37,33 @@ self.addEventListener('activate', event => {
   self.clients.claim();
 });
 
-// Estratégia de fetch: Cache First, com fallback para Network
+// Estratégia de fetch: Network First, com fallback para Cache
 self.addEventListener('fetch', event => {
   const { request } = event;
-  
+
   // Ignorar requisições não-GET
   if (request.method !== 'GET') {
     return;
   }
 
   event.respondWith(
-    caches.match(request).then(cachedResponse => {
-      if (cachedResponse) {
-        console.log('Servindo do cache:', request.url);
-        return cachedResponse;
+    fetch(request).then(response => {
+      // Não cachear respostas inválidas
+      if (!response || response.status !== 200 || response.type === 'error') {
+        return response;
       }
 
-      return fetch(request).then(response => {
-        // Não cachear respostas inválidas
-        if (!response || response.status !== 200 || response.type === 'error') {
-          return response;
-        }
+      // Clonar e atualizar cache
+      const responseToCache = response.clone();
+      caches.open(CACHE_NAME).then(cache => {
+        cache.put(request, responseToCache);
+      });
 
-        // Clonar a resposta
-        const responseToCache = response.clone();
-
-        caches.open(CACHE_NAME).then(cache => {
-          cache.put(request, responseToCache);
-        });
-
-        return response;
-      }).catch(err => {
-        console.error('Erro de fetch:', err);
-        // Retornar página offline se disponível
-        return caches.match('/gabriel-bolsa-guide/index.html');
+      return response;
+    }).catch(err => {
+      console.error('Erro de fetch, servindo do cache:', err);
+      return caches.match(request).then(cachedResponse => {
+        return cachedResponse || caches.match('/gabriel-bolsa-guide/index.html');
       });
     })
   );
