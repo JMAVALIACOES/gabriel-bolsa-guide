@@ -3,9 +3,9 @@
 
 class AIAssistant {
   constructor() {
-    this.apiKey = import.meta.env.VITE_OPENROUTER_API_KEY;
-    this.model = import.meta.env.VITE_OPENROUTER_MODEL || 'openai/gpt-3.5-turbo';
-    this.baseUrl = import.meta.env.VITE_OPENROUTER_BASE_URL || 'https://openrouter.ai/api/v1';
+    this.apiKey = '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';
+    this.model = 'openai/gpt-3.5-turbo';
+    this.baseUrl = 'https://openrouter.ai/api/v1';
     this.conversationHistory = [];
     this.isLoading = false;
   }
