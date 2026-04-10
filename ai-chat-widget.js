@@ -383,7 +383,7 @@ class AIChatWidget {
     const close = document.getElementById('ai-chat-close');
     const send = document.getElementById('ai-chat-send');
     const input = document.getElementById('ai-chat-input');
-    const window = document.getElementById('ai-chat-window');
+    const chatWindow = document.getElementById('ai-chat-window');
 
     toggle.addEventListener('click', () => this.toggleChat());
     close.addEventListener('click', () => this.closeChat());
