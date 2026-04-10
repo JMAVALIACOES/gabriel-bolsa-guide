@@ -1,9 +1,27 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Guia completo e interativo sobre investimentos na Bolsa de Valores B3, do zero ao avançado">
+<meta name="theme-color" content="#0a0e17">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Gabriel Bolsa">
+<meta name="apple-mobile-web-app-icon" content="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%230a0e17' width='192' height='192'/><text x='50%' y='50%' font-size='80' font-weight='bold' fill='%2310b981' text-anchor='middle' dy='.3em'>G</text><text x='50%' y='70%' font-size='40' fill='%2310b981' text-anchor='middle'>📈</text></svg>">
+<meta name="msapplication-TileColor" content="#0a0e17">
+<meta name="msapplication-config" content="browserconfig.xml">
+<meta name="og:title" content="Gabriel — Bolsa de Valores do Zero ao Avançado">
+<meta name="og:description" content="Guia completo e interativo sobre investimentos na Bolsa de Valores B3">
+<meta name="og:type" content="website">
+<meta name="og:url" content="https://jmavaliacoes.github.io/gabriel-bolsa-guide/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gabriel — Bolsa de Valores do Zero ao Avançado">
+<meta name="twitter:description" content="Guia completo e interativo sobre investimentos na Bolsa de Valores B3">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%230a0e17' width='192' height='192'/><text x='50%' y='50%' font-size='80' font-weight='bold' fill='%2310b981' text-anchor='middle' dy='.3em'>G</text></svg>">
 <title>Gabriel — Bolsa de Valores do Zero ao Avançado</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -83,6 +101,41 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 .level-dot.filled{background:var(--accent)}.level-dot.half{background:linear-gradient(90deg,var(--accent) 50%,var(--border) 50%)}
 .divider{height:1px;background:var(--border);margin:28px 0}
 h3.section-h3{color:#fff;font-size:15px;margin-bottom:14px;font-weight:700}
+.input-group{display:flex;gap:8px;margin-bottom:16px}
+.input-group input{flex:1;padding:10px 14px;background:var(--surface-2);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:13px}
+.input-group button{padding:10px 20px;background:var(--accent);color:#fff;border:none;border-radius:8px;font-weight:700;cursor:pointer;transition:all .2s}
+.input-group button:hover{background:var(--accent-dim)}
+.quiz-option{display:flex;gap:12px;padding:14px;background:var(--surface-2);border:1px solid var(--border);border-radius:12px;margin-bottom:10px;cursor:pointer;transition:all .2s}
+.quiz-option:hover{border-color:var(--accent)}
+.quiz-option input{cursor:pointer}
+.quiz-option label{cursor:pointer;flex:1}
+.result-box{background:linear-gradient(135deg,rgba(16,185,129,.1),rgba(59,130,246,.1));border:1px solid rgba(16,185,129,.3);border-radius:12px;padding:20px;margin-top:20px;text-align:center}
+.result-box h3{color:var(--accent);margin-bottom:10px}
+.result-box p{color:var(--text-dim)}
+.checklist-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--border)}
+.checklist-item:last-child{border-bottom:none}
+.checklist-item input{cursor:pointer;margin-top:2px}
+.checklist-item label{cursor:pointer;flex:1}
+.checklist-item label strong{color:#fff}
+.checklist-item label span{display:block;font-size:12px;color:var(--text-dim);margin-top:2px}
+.calculator-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+.calc-input{padding:10px 14px;background:var(--surface-2);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:13px}
+.calc-result{background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.3);border-radius:8px;padding:16px;text-align:center}
+.calc-result h4{color:var(--accent);margin-bottom:8px}
+.calc-result .value{font-size:24px;font-weight:700;color:#fff}
+.roadmap-step{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px;margin-bottom:14px;position:relative;padding-left:50px}
+.roadmap-step::before{content:attr(data-step);position:absolute;left:16px;top:18px;width:32px;height:32px;background:var(--accent);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px}
+.roadmap-step h4{color:#fff;margin-bottom:8px}
+.roadmap-step p{font-size:13px;color:var(--text-dim);margin-bottom:8px}
+.roadmap-step .time{display:inline-block;padding:3px 10px;background:rgba(16,185,129,.15);color:var(--accent);border-radius:100px;font-size:11px;font-weight:700}
+.case-study{background:linear-gradient(135deg,rgba(59,130,246,.08),rgba(139,92,246,.08));border:1px solid rgba(59,130,246,.2);border-radius:12px;padding:20px;margin-bottom:16px}
+.case-study h4{color:#fff;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.case-study .result{font-size:13px;color:var(--text-dim);margin-bottom:10px}
+.case-study .lesson{background:rgba(16,185,129,.1);border-left:3px solid var(--accent);padding:10px 12px;border-radius:4px;font-size:13px;color:var(--text-dim);font-style:italic}
+.event-item{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:12px;border-left:4px solid var(--accent)}
+.event-item .date{font-size:12px;color:var(--accent);font-weight:700;text-transform:uppercase}
+.event-item h4{color:#fff;margin:6px 0}
+.event-item p{font-size:13px;color:var(--text-dim)}
 footer{text-align:center;padding:36px 20px;color:var(--text-dim);font-size:11.5px;border-top:1px solid var(--border)}
 </style>
 </head>
@@ -95,321 +148,698 @@ footer{text-align:center;padding:36px 20px;color:var(--text-dim);font-size:11.5p
 </div>
 
 <nav class="nav-tabs"><div class="nav-inner">
-  <button class="nav-tab active" onclick="showSection('basico')">🟢 O Básico</button>
-  <button class="nav-tab" onclick="showSection('passo')">📋 Passo a Passo</button>
-  <button class="nav-tab" onclick="showSection('formas')">⚡ 3 Formas</button>
-  <button class="nav-tab" onclick="showSection('avancado')">🚀 Avançado</button>
-  <button class="nav-tab" onclick="showSection('impostos')">📊 Impostos</button>
-  <button class="nav-tab" onclick="showSection('simuladores')">🎮 Simuladores</button>
-  <button class="nav-tab" onclick="showSection('ferramentas')">🔧 Ferramentas</button>
+  <button class="nav-tab active" onclick="showSection('basico')">🟢 Básico</button>
+  <button class="nav-tab" onclick="showSection('primeiro-trade')">🎯 1º Trade</button>
+  <button class="nav-tab" onclick="showSection('calculadora')">🧮 Calc</button>
+  <button class="nav-tab" onclick="showSection('seguranca')">🔒 Segurança</button>
+  <button class="nav-tab" onclick="showSection('perfil')">📊 Perfil</button>
+  <button class="nav-tab" onclick="showSection('calendario')">📅 Calendário</button>
+  <button class="nav-tab" onclick="showSection('comparativo')">⚖️ Corretoras</button>
+  <button class="nav-tab" onclick="showSection('casos')">📈 Casos</button>
+  <button class="nav-tab" onclick="showSection('roadmap')">🗺️ Roadmap</button>
   <button class="nav-tab" onclick="showSection('dicas')">💡 Dicas</button>
-  <button class="nav-tab" onclick="showSection('cursos')">🎓 Cursos</button>
-  <button class="nav-tab" onclick="showSection('recursos')">📚 Recursos</button>
-  <button class="nav-tab" onclick="showSection('glossario')">📖 Glossário</button>
 </div></nav>
 
 <div class="container">
 
 <!-- 1. BÁSICO -->
-
 <div class="section active" id="basico">
-<div class="section-label">Nível Iniciante</div><h2>O que é a Bolsa de Valores?</h2>
-<p class="section-intro">Gabriel, pense na Bolsa como um grande shopping online — mas o que se compra e vende ali são "pedacinhos" de empresas.</p>
-<div class="level-indicator"><div class="level-dot filled"></div><div class="level-dot"></div><div class="level-dot"></div><div class="level-dot"></div><div class="level-dot"></div></div>
-<div class="card"><div class="card-header"><div class="card-icon green">🏪</div><div><div class="card-title">A Bolsa é um mercado</div></div></div><p>Imagine uma feira gigante onde empresas vendem "pedaços" de si mesmas — são as <strong>ações</strong>. Ao comprar uma ação da Petrobras, você se torna <strong>sócio(a)</strong> dela. Se cresce, sua ação valoriza. No Brasil, a Bolsa se chama <strong>B3</strong> e funciona 100% online.</p></div>
-<div class="card"><div class="card-header"><div class="card-icon blue">💰</div><div><div class="card-title">Como se ganha dinheiro?</div></div></div><p><strong>1. Valorização:</strong> Compra a R$10, vende a R$15, lucro de R$5/ação.</p><p style="margin-top:8px"><strong>2. Dividendos:</strong> Empresas distribuem parte do lucro diretamente na sua conta — sem vender a ação.</p></div>
-<div class="card"><div class="card-header"><div class="card-icon purple">🏛️</div><div><div class="card-title">Quem regula?</div></div></div><p>A <strong>CVM</strong> (Comissão de Valores Mobiliários) fiscaliza tudo. A B3 tem regras internas, e o Banco Central também atua. Seu dinheiro fica em contas segregadas.</p></div>
-<div class="card"><div class="card-header"><div class="card-icon amber">📦</div><div><div class="card-title">O que se negocia?</div></div></div><ul><li><strong>Ações</strong> — pedaços de empresas</li><li><strong>ETFs</strong> — "pacotes" de ações (BOVA11 = Ibovespa inteiro)</li><li><strong>FIIs</strong> — Fundos Imobiliários com "aluguel" mensal</li><li><strong>BDRs</strong> — ações estrangeiras na B3</li><li><strong>Opções e Futuros</strong> — para experientes</li></ul></div>
-<div class="alert warning"><span class="alert-icon">⚠️</span><div><strong>Atenção:</strong> Bolsa = renda variável. Sem garantia de lucro. <strong>Nunca invista dinheiro que você vai precisar no curto prazo.</strong></div></div>
+  <div class="section-label">Fundamentos</div>
+  <h2>O Básico da Bolsa</h2>
+  <p class="section-intro">Comece aqui se você nunca investiu antes. Vamos cobrir os conceitos essenciais.</p>
+  
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon green">📚</div>
+      <div>
+        <div class="card-title">O que é Bolsa de Valores?</div>
+        <div class="card-subtitle">Conceito fundamental</div>
+      </div>
+    </div>
+    <p>A Bolsa de Valores é um mercado onde títulos (ações, fundos, etc) são comprados e vendidos. No Brasil, a principal é a <strong>B3</strong>. Você não compra diretamente na bolsa — usa uma corretora como intermediária.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon blue">💰</div>
+      <div>
+        <div class="card-title">Ações: O que são?</div>
+        <div class="card-subtitle">Propriedade de empresas</div>
+      </div>
+    </div>
+    <p>Uma ação é uma fração de uma empresa. Quando você compra ações, você vira sócio (minoritário) daquela empresa. Se ela lucra, você lucra. Se ela perde, você perde.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon purple">🎯</div>
+      <div>
+        <div class="card-title">Tipos de Investimento</div>
+        <div class="card-subtitle">Diferentes estratégias</div>
+      </div>
+    </div>
+    <ul>
+      <li><strong>Buy & Hold:</strong> Compra e segura por anos</li>
+      <li><strong>Day Trade:</strong> Compra e vende no mesmo dia</li>
+      <li><strong>Swing Trade:</strong> Segura por dias/semanas</li>
+      <li><strong>Dividendos:</strong> Foca em renda passiva</li>
+    </ul>
+  </div>
 </div>
 
-<!-- 2. PASSO A PASSO -->
+<!-- 2. MEU PRIMEIRO TRADE -->
+<div class="section" id="primeiro-trade">
+  <div class="section-label">Passo a Passo Prático</div>
+  <h2>Meu Primeiro Trade</h2>
+  <p class="section-intro">Guia prático para fazer sua primeira operação na bolsa.</p>
 
-<div class="section" id="passo">
-<div class="section-label">Mão na Massa</div><h2>Passo a Passo para Começar</h2>
-<p class="section-intro">Do zero à primeira compra.</p>
-<div class="level-indicator"><div class="level-dot filled"></div><div class="level-dot filled"></div><div class="level-dot"></div><div class="level-dot"></div><div class="level-dot"></div></div>
-<div class="card">
-<div class="step-item"><span class="step-number">1</span><div class="step-content"><h4>Monte reserva de emergência</h4><p>3-6 meses de gastos em Tesouro Selic ou CDB de liquidez diária.</p></div></div>
-<div class="step-item"><span class="step-number">2</span><div class="step-content"><h4>Abra conta em corretora</h4><p>Conta gratuita: XP, Rico, Clear, NuInvest, BTG, Inter, C6. Abertura 100% digital.</p></div></div>
-<div class="step-item"><span class="step-number">3</span><div class="step-content"><h4>Teste de perfil</h4><p>Conservador, moderado ou arrojado. Responda com sinceridade.</p></div></div>
-<div class="step-item"><span class="step-number">4</span><div class="step-content"><h4>Transfira via Pix</h4><p>Dá para começar com R$50 ou R$100 no mercado fracionário.</p></div></div>
-<div class="step-item"><span class="step-number">5</span><div class="step-content"><h4>Acesse o Home Broker</h4><p>Digite o ticker (PETR4, VALE3, BOVA11), escolha quantidade e tipo de ordem.</p></div></div>
-<div class="step-item"><span class="step-number">6</span><div class="step-content"><h4>Primeira compra</h4><p>Ordem a mercado (preço atual) ou ordem limitada (preço máximo que aceita).</p></div></div>
-</div>
-<div class="alert info"><span class="alert-icon">💡</span><div><strong>Fracionário:</strong> Adicione "F" ao ticker (PETR4F) para comprar de 1 a 99 ações!</div></div>
-<div class="card"><div class="card-header"><div class="card-icon green">🎯</div><div><div class="card-title">Estratégia segura para iniciantes</div></div></div><ul><li>Comece por <strong>ETFs</strong> (BOVA11)</li><li>Invista em <strong>blue chips</strong> (ITUB4, VALE3, WEGE3)</li><li><strong>Diversifique</strong> — nunca tudo numa ação</li><li><strong>Aporte mensal</strong> fixo ("preço médio")</li><li>Pense no <strong>longo prazo</strong></li></ul></div>
-</div>
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon green">✅</div>
+      <div>
+        <div class="card-title">Passo 1: Abrir Conta</div>
+      </div>
+    </div>
+    <ol>
+      <li>Escolha uma corretora (Nubank, XP, Rico, Toro, etc)</li>
+      <li>Acesse o site e clique em "Abrir Conta"</li>
+      <li>Preencha seus dados pessoais</li>
+      <li>Faça a validação de identidade (selfie + documento)</li>
+      <li>Aguarde aprovação (geralmente 1-2 horas)</li>
+      <li>Transfira dinheiro para sua conta</li>
+    </ol>
+  </div>
 
-<!-- 3. 3 FORMAS -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon blue">📱</div>
+      <div>
+        <div class="card-title">Passo 2: Escolher uma Ação</div>
+      </div>
+    </div>
+    <p><strong>Para iniciantes, recomendo:</strong></p>
+    <ul>
+      <li><strong>Ações Blue Chip:</strong> Petrobras (PETR4), Vale (VALE3), Itaú (ITUB4)</li>
+      <li><strong>Critério:</strong> Empresas grandes, conhecidas, com histórico</li>
+      <li><strong>Evite:</strong> Ações muito baratas ou desconhecidas no início</li>
+    </ul>
+  </div>
 
-<div class="section" id="formas">
-<div class="section-label">Estratégias</div><h2>As 3 Formas de Operar</h2>
-<p class="section-intro">Cada estilo tem tempo, risco e perfil diferentes.</p>
-<div class="level-indicator"><div class="level-dot filled"></div><div class="level-dot filled"></div><div class="level-dot filled"></div><div class="level-dot"></div><div class="level-dot"></div></div>
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon purple">🛒</div>
+      <div>
+        <div class="card-title">Passo 3: Fazer Sua Primeira Compra</div>
+      </div>
+    </div>
+    <ol>
+      <li>Abra o app/plataforma da corretora</li>
+      <li>Procure a ação (ex: PETR4)</li>
+      <li>Clique em "Comprar"</li>
+      <li>Digite a quantidade (ex: 10 ações)</li>
+      <li>Revise o preço total e clique em "Confirmar"</li>
+      <li>Pronto! Você é dono de ações</li>
+    </ol>
+  </div>
 
-<div class="card"><div class="card-header"><div class="card-icon red">⚡</div><div><div class="card-title">1. Day Trade</div><div class="card-subtitle">Mesmo dia — minutos a horas</div></div></div>
-<p>Compra e vende <strong>no mesmo dia</strong>. Ex: compra às 10h a R$20, vende às 14h a R$20,50.</p>
-<p style="margin-top:6px"><strong>Ativos:</strong> Mini-índice (WIN), mini-dólar (WDO). <strong>Análise:</strong> Técnica + tape reading.</p>
-<div class="alert warning" style="margin-top:12px"><span class="alert-icon">🚨</span><div>Risco muito alto. Maioria perde dinheiro. <strong>Não recomendado para iniciantes.</strong></div></div></div>
-
-<div class="card"><div class="card-header"><div class="card-icon amber">📈</div><div><div class="card-title">2. Swing Trade</div><div class="card-subtitle">Dias a semanas</div></div></div>
-<p>Mantém posição por <strong>dias ou semanas</strong>. Menos pressão que day trade, bons ganhos potenciais.</p>
-<p style="margin-top:6px"><strong>Ativos:</strong> Ações líquidas, opções. <strong>Análise:</strong> Técnica + Fundamentalista.</p>
-<div class="alert success" style="margin-top:12px"><span class="alert-icon">✅</span><div>Equilíbrio risco/retorno. Boa opção para quem já estudou o básico.</div></div></div>
-
-<div class="card"><div class="card-header"><div class="card-icon green">🌱</div><div><div class="card-title">3. Position / Buy and Hold</div><div class="card-subtitle">Meses a anos</div></div></div>
-<p>Compra empresas sólidas e mantém por <strong>meses ou anos</strong>. Estratégia do Warren Buffett.</p>
-<p style="margin-top:6px"><strong>Ativos:</strong> Blue chips, ETFs, FIIs. <strong>Análise:</strong> Fundamentalista.</p>
-<div class="alert success" style="margin-top:12px"><span class="alert-icon">🏆</span><div><strong>Ideal para você, Gabriel.</strong> Menor risco, menor custo, isenção de IR até R$20k/mês.</div></div></div>
-
-<div class="card"><div class="card-header"><div class="card-icon blue">📊</div><div><div class="card-title">Comparativo</div></div></div>
-<div style="overflow-x:auto"><table class="compare-table"><thead><tr><th>Critério</th><th>Day Trade</th><th>Swing</th><th>Position</th></tr></thead><tbody>
-<tr><td><strong>Duração</strong></td><td>Min/horas</td><td>Dias/semanas</td><td>Meses/anos</td></tr>
-<tr><td><strong>Risco</strong></td><td><span class="badge hard">Muito alto</span></td><td><span class="badge medium">Médio</span></td><td><span class="badge easy">Menor</span></td></tr>
-<tr><td><strong>Tempo</strong></td><td>Integral</td><td>Horas/dia</td><td>Min/semana</td></tr>
-<tr><td><strong>IR</strong></td><td>20%</td><td>15%</td><td>15%</td></tr>
-<tr><td><strong>Iniciante?</strong></td><td><span class="badge hard">Não</span></td><td><span class="badge medium">Com estudo</span></td><td><span class="badge easy">Sim</span></td></tr>
-</tbody></table></div></div>
-</div>
-
-<!-- 4. AVANÇADO -->
-
-<div class="section" id="avancado">
-<div class="section-label">Nível Avançado</div><h2>Conceitos Avançados</h2>
-<p class="section-intro">O que separa o amador do investidor de alta performance.</p>
-<div class="level-indicator"><div class="level-dot filled"></div><div class="level-dot filled"></div><div class="level-dot filled"></div><div class="level-dot filled"></div><div class="level-dot half"></div></div>
-
-<div class="card"><div class="card-header"><div class="card-icon blue">🔍</div><div><div class="card-title">Análise Fundamentalista</div></div></div><ul><li><strong>P/L</strong> — anos de lucro para "pagar" a ação</li><li><strong>P/VP</strong> — preço vs. valor contábil</li><li><strong>ROE</strong> — retorno sobre patrimônio</li><li><strong>Dividend Yield</strong> — % dividendos/preço</li><li><strong>Dívida/EBITDA</strong> — endividamento</li><li><strong>Margem Líquida</strong> — % que vira lucro</li></ul></div>
-
-<div class="card"><div class="card-header"><div class="card-icon purple">📉</div><div><div class="card-title">Análise Técnica</div></div></div><ul><li><strong>Candlesticks</strong> — velas de preço</li><li><strong>Médias Móveis</strong> — tendência (9, 21, 200)</li><li><strong>Suporte/Resistência</strong> — regiões-chave</li><li><strong>IFR (RSI)</strong> — sobrecompra/sobrevenda</li><li><strong>MACD</strong> — reversões</li><li><strong>Bollinger</strong> — volatilidade</li></ul></div>
-
-<div class="card"><div class="card-header"><div class="card-icon amber">🛡️</div><div><div class="card-title">Gestão de Risco</div></div></div><ul><li><strong>Stop Loss</strong> — limite de perda automático</li><li>Nunca arrisque mais que <strong>1-2% do capital</strong> por operação</li><li>Relação risco/retorno mínima de <strong>1:2</strong></li><li><strong>Diversifique</strong> entre setores e ativos</li></ul>
-<div class="alert warning" style="margin-top:12px"><span class="alert-icon">🧠</span><div>Ganância e medo são seus maiores inimigos. Tenha plano, siga-o.</div></div></div>
-
-<div class="card"><div class="card-header"><div class="card-icon red">🎲</div><div><div class="card-title">Opções</div></div></div><p><strong>CALL:</strong> Direito de comprar (aposta na alta). <strong>PUT:</strong> Direito de vender (proteção/queda).</p><p style="margin-top:6px">Estratégias: venda coberta, travas, straddle. Estude muito antes.</p></div>
-
-<div class="card"><div class="card-header"><div class="card-icon green">📐</div><div><div class="card-title">Portfólio Modelo (moderado)</div></div></div><ul><li><strong>30%</strong> Renda fixa</li><li><strong>30%</strong> Ações BR</li><li><strong>15%</strong> FIIs</li><li><strong>15%</strong> Internacional</li><li><strong>10%</strong> Caixa</li></ul></div>
+  <div class="alert info">
+    <div class="alert-icon">ℹ️</div>
+    <div><strong>Dica:</strong> Comece com pouco dinheiro. Não tente ficar rico rápido. O objetivo é aprender como funciona.</div>
+  </div>
 </div>
 
-<!-- 5. IMPOSTOS -->
+<!-- 3. CALCULADORA INTERATIVA -->
+<div class="section" id="calculadora">
+  <div class="section-label">Ferramentas</div>
+  <h2>Calculadora de Investimentos</h2>
+  <p class="section-intro">Simule seus ganhos e perdas.</p>
 
-<div class="section" id="impostos">
-<div class="section-label">Prática</div><h2>Impostos e Custos</h2>
-<div class="level-indicator"><div class="level-dot filled"></div><div class="level-dot filled"></div><div class="level-dot filled"></div><div class="level-dot filled"></div><div class="level-dot"></div></div>
-<div class="card"><div class="card-header"><div class="card-icon amber">🧾</div><div><div class="card-title">IR na Bolsa</div></div></div>
-<div style="overflow-x:auto"><table class="compare-table"><thead><tr><th>Operação</th><th>IR</th><th>Isenção?</th></tr></thead><tbody>
-<tr><td><strong>Day Trade</strong></td><td>20%</td><td>Não</td></tr>
-<tr><td><strong>Swing/Position</strong></td><td>15%</td><td>Vendas até R$20k/mês</td></tr>
-<tr><td><strong>FIIs</strong></td><td>20%</td><td>Dividendos isentos PF</td></tr>
-<tr><td><strong>ETFs</strong></td><td>15% ou 20%</td><td>Sem isenção R$20k</td></tr>
-</tbody></table></div>
-<p style="margin-top:12px"><strong>DARF:</strong> Você gera e paga até o último dia útil do mês seguinte.</p></div>
-<div class="card"><div class="card-header"><div class="card-icon blue">💳</div><div><div class="card-title">Custos operacionais</div></div></div><ul><li><strong>Corretagem</strong> — muitas zeraram</li><li><strong>Emolumentos B3</strong> — taxa pequena</li><li><strong>Custódia</strong> — maioria zerou</li><li><strong>ISS</strong> — 5% sobre corretagem</li></ul></div>
+  <div class="card">
+    <h3 class="section-h3">💰 Calculadora de Lucro/Prejuízo</h3>
+    <div class="calculator-grid">
+      <div>
+        <label style="font-size:12px;color:var(--text-dim)">Preço de Compra (R$)</label>
+        <input type="number" id="precoCompra" class="calc-input" placeholder="Ex: 25.50" step="0.01">
+      </div>
+      <div>
+        <label style="font-size:12px;color:var(--text-dim)">Preço de Venda (R$)</label>
+        <input type="number" id="precoVenda" class="calc-input" placeholder="Ex: 28.00" step="0.01">
+      </div>
+      <div>
+        <label style="font-size:12px;color:var(--text-dim)">Quantidade</label>
+        <input type="number" id="quantidade" class="calc-input" placeholder="Ex: 100" step="1">
+      </div>
+      <div>
+        <label style="font-size:12px;color:var(--text-dim)">Taxa (R$)</label>
+        <input type="number" id="taxa" class="calc-input" placeholder="Ex: 5.00" step="0.01" value="0">
+      </div>
+    </div>
+    <button onclick="calcularLucro()" style="width:100%;padding:12px;background:var(--accent);color:#fff;border:none;border-radius:8px;font-weight:700;cursor:pointer;margin-bottom:16px">Calcular</button>
+    <div id="resultadoLucro"></div>
+  </div>
+
+  <div class="card">
+    <h3 class="section-h3">📈 Calculadora de Rentabilidade com Dividendos</h3>
+    <div class="calculator-grid">
+      <div>
+        <label style="font-size:12px;color:var(--text-dim)">Investimento Inicial (R$)</label>
+        <input type="number" id="investimento" class="calc-input" placeholder="Ex: 10000" step="0.01">
+      </div>
+      <div>
+        <label style="font-size:12px;color:var(--text-dim)">Dividendo Anual (%)</label>
+        <input type="number" id="dividendo" class="calc-input" placeholder="Ex: 6" step="0.1" value="6">
+      </div>
+      <div>
+        <label style="font-size:12px;color:var(--text-dim)">Período (anos)</label>
+        <input type="number" id="periodo" class="calc-input" placeholder="Ex: 5" step="1" value="5">
+      </div>
+      <div>
+        <label style="font-size:12px;color:var(--text-dim)">Reinvestimento (%)</label>
+        <input type="number" id="reinvestimento" class="calc-input" placeholder="Ex: 100" step="1" value="100">
+      </div>
+    </div>
+    <button onclick="calcularDividendos()" style="width:100%;padding:12px;background:var(--accent);color:#fff;border:none;border-radius:8px;font-weight:700;cursor:pointer;margin-bottom:16px">Calcular</button>
+    <div id="resultadoDividendos"></div>
+  </div>
 </div>
 
-<!-- 6. SIMULADORES -->
+<!-- 4. CHECKLIST DE SEGURANÇA -->
+<div class="section" id="seguranca">
+  <div class="section-label">Proteção</div>
+  <h2>Checklist de Segurança</h2>
+  <p class="section-intro">Proteja seus dados e dinheiro. Marque cada item conforme completar.</p>
 
-<div class="section" id="simuladores">
-<div class="section-label">Pratique Sem Risco</div><h2>🎮 Simuladores Gratuitos</h2>
-<p class="section-intro">Gabriel, treine aqui antes de usar dinheiro real. Cotações reais, dinheiro fictício — zero risco.</p>
-<div class="level-indicator"><div class="level-dot filled"></div><div class="level-dot filled"></div><div class="level-dot"></div><div class="level-dot"></div><div class="level-dot"></div></div>
+  <div class="card">
+    <h3 class="section-h3">✅ Verificação de Corretora</h3>
+    <div class="checklist-item">
+      <input type="checkbox" id="check1">
+      <label for="check1"><strong>Corretora é autorizada pela CVM?</strong><span>Verifique em www.cvm.gov.br</span></label>
+    </div>
+    <div class="checklist-item">
+      <input type="checkbox" id="check2">
+      <label for="check2"><strong>Tem seguro do FGC?</strong><span>Protege até R$ 250 mil por corretora</span></label>
+    </div>
+    <div class="checklist-item">
+      <input type="checkbox" id="check3">
+      <label for="check3"><strong>Site usa HTTPS?</strong><span>Procure pelo cadeado na barra de endereço</span></label>
+    </div>
+  </div>
 
-<div class="sim-card"><span class="sim-badge free">✅ GRATUITO</span><h4>🏆 Simulador Traders Club</h4><p>Cotações reais, book de ofertas real, torneios semanais com prêmios em dinheiro.</p><div class="sim-features"><span class="sim-feat">📱 iOS/Android</span><span class="sim-feat">📊 Book real</span><span class="sim-feat">🏅 Torneios</span></div><a href="https://www.traders.com.br/" target="_blank" class="sim-link">Acessar →</a></div>
+  <div class="card">
+    <h3 class="section-h3">🔐 Proteção de Dados</h3>
+    <div class="checklist-item">
+      <input type="checkbox" id="check4">
+      <label for="check4"><strong>Senha forte (12+ caracteres)</strong><span>Misture maiúsculas, números e símbolos</span></label>
+    </div>
+    <div class="checklist-item">
+      <input type="checkbox" id="check5">
+      <label for="check5"><strong>Autenticação em 2 fatores ativada</strong><span>Adiciona camada extra de segurança</span></label>
+    </div>
+    <div class="checklist-item">
+      <input type="checkbox" id="check6">
+      <label for="check6"><strong>Nunca compartilhe sua senha</strong><span>Nem com suporte, nem com amigos</span></label>
+    </div>
+  </div>
 
-<div class="sim-card"><span class="sim-badge free">✅ GRATUITO</span><h4>📱 Vexter (Genial)</h4><p>R$100 mil fictícios, cotação em tempo real, notícias e análises no app.</p><div class="sim-features"><span class="sim-feat">📱 Mobile</span><span class="sim-feat">💵 R$100k</span><span class="sim-feat">🎓 Educativo</span></div><a href="https://blog.vexter.com.br/simulador-gratuito/" target="_blank" class="sim-link">Baixar →</a></div>
-
-<div class="sim-card"><span class="sim-badge free">✅ GRATUITO</span><h4>🌐 ADVFN Simulador</h4><p>No navegador, sem instalar nada. Carteiras ilimitadas, dicionário incluso.</p><div class="sim-features"><span class="sim-feat">🖥️ Web</span><span class="sim-feat">♾️ Ilimitado</span><span class="sim-feat">📚 Dicionário</span></div><a href="https://br.advfn.com/simulador" target="_blank" class="sim-link">Acessar →</a></div>
-
-<div class="sim-card"><span class="sim-badge freemium">⚡ FREEMIUM</span><h4>📈 TradingView Paper Trading</h4><p>Melhor plataforma de gráficos do mundo com simulador integrado.</p><div class="sim-features"><span class="sim-feat">🖥️ Web+App</span><span class="sim-feat">📊 Gráficos top</span><span class="sim-feat">🌎 Global</span></div><a href="https://www.tradingview.com/" target="_blank" class="sim-link">Acessar →</a></div>
-
-<div class="sim-card"><span class="sim-badge freemium">⚡ FREEMIUM</span><h4>💻 Profit (Nelogica)</h4><p>Replay de mercado — volte no tempo e pratique com dados históricos reais da B3.</p><div class="sim-features"><span class="sim-feat">⏪ Replay</span><span class="sim-feat">📊 Dados B3</span><span class="sim-feat">🎯 Profissional</span></div><a href="https://www.nelogica.com.br/produtos/profit" target="_blank" class="sim-link">Conhecer →</a></div>
-
-<div class="sim-card"><span class="sim-badge free">✅ GRATUITO</span><h4>🏛️ Simulador Tesouro Direto</h4><p>Site oficial do governo. Simule rendimentos de Tesouro Selic, IPCA+, Renda+.</p><div class="sim-features"><span class="sim-feat">🏛️ Oficial</span><span class="sim-feat">🔒 Renda fixa</span><span class="sim-feat">📊 Projeções</span></div><a href="https://www.tesourodireto.com.br/simulador/" target="_blank" class="sim-link">Simular →</a></div>
-
-<div class="alert success"><span class="alert-icon">🎯</span><div><strong>Gabriel, comece assim:</strong> Vexter ou ADVFN (simples) → depois TradingView (gráficos) → pratique <strong>mínimo 30 dias</strong> antes de dinheiro real.</div></div>
+  <div class="card">
+    <h3 class="section-h3">⚠️ Reconhecimento de Golpes</h3>
+    <div class="checklist-item">
+      <input type="checkbox" id="check7">
+      <label for="check7"><strong>Cuidado com mensagens de "oportunidades"</strong><span>Promessas de lucro rápido são sempre golpes</span></label>
+    </div>
+    <div class="checklist-item">
+      <input type="checkbox" id="check8">
+      <label for="check8"><strong>Não clique em links de emails/SMS</strong><span>Acesse sempre pelo app ou site oficial</span></label>
+    </div>
+    <div class="checklist-item">
+      <input type="checkbox" id="check9">
+      <label for="check9"><strong>Desconfie de "gurus" de investimento</strong><span>Ninguém consegue prever o mercado</span></label>
+    </div>
+  </div>
 </div>
 
-<!-- 7. FERRAMENTAS -->
+<!-- 5. QUIZ DE PERFIL -->
+<div class="section" id="perfil">
+  <div class="section-label">Autoconhecimento</div>
+  <h2>Qual é Seu Perfil de Investidor?</h2>
+  <p class="section-intro">Responda as 3 perguntas abaixo para descobrir seu perfil.</p>
 
-<div class="section" id="ferramentas">
-<div class="section-label">Arsenal</div><h2>🔧 Ferramentas Gratuitas</h2>
-<p class="section-intro">Sites e apps que todo investidor usa no dia a dia.</p>
-<div class="level-indicator"><div class="level-dot filled"></div><div class="level-dot filled"></div><div class="level-dot filled"></div><div class="level-dot"></div><div class="level-dot"></div></div>
+  <div class="card">
+    <h3 class="section-h3">Pergunta 1: Quanto você pode perder?</h3>
+    <div class="quiz-option">
+      <input type="radio" name="q1" value="conservador" id="q1a">
+      <label for="q1a">Nada. Prefiro segurança total, mesmo com ganhos menores</label>
+    </div>
+    <div class="quiz-option">
+      <input type="radio" name="q1" value="moderado" id="q1b">
+      <label for="q1b">Um pouco. Aceito risco moderado para ganhar mais</label>
+    </div>
+    <div class="quiz-option">
+      <input type="radio" name="q1" value="agressivo" id="q1c">
+      <label for="q1c">Bastante. Quero máximo retorno, mesmo com risco alto</label>
+    </div>
 
-<h3 class="section-h3">📊 Análise de Ações e FIIs</h3>
-<a href="https://statusinvest.com.br" target="_blank" class="resource-link"><span class="rl-icon">📊</span><div><div class="rl-type">Gratuito</div><div class="rl-title">Status Invest</div><div class="rl-desc">Indicadores, gráficos, comparações. Ações, FIIs, ETFs, BDRs.</div></div></a>
-<a href="https://fundamentus.com.br" target="_blank" class="resource-link"><span class="rl-icon">📈</span><div><div class="rl-type">Gratuito</div><div class="rl-title">Fundamentus</div><div class="rl-desc">Todos os indicadores fundamentalistas da B3.</div></div></a>
-<a href="https://investidor10.com.br" target="_blank" class="resource-link"><span class="rl-icon">🔎</span><div><div class="rl-type">Gratuito</div><div class="rl-title">Investidor 10</div><div class="rl-desc">Rankings, filtros por setor, dividend yield, comparador.</div></div></a>
-<a href="https://www.fundamentei.com" target="_blank" class="resource-link"><span class="rl-icon">📑</span><div><div class="rl-type">Freemium</div><div class="rl-title">Fundamentei</div><div class="rl-desc">Resumos visuais de balanços e histórico de dividendos.</div></div></a>
+    <h3 class="section-h3" style="margin-top:24px">Pergunta 2: Seu horizonte de investimento?</h3>
+    <div class="quiz-option">
+      <input type="radio" name="q2" value="conservador" id="q2a">
+      <label for="q2a">Curto prazo (menos de 1 ano)</label>
+    </div>
+    <div class="quiz-option">
+      <input type="radio" name="q2" value="moderado" id="q2b">
+      <label for="q2b">Médio prazo (1-5 anos)</label>
+    </div>
+    <div class="quiz-option">
+      <input type="radio" name="q2" value="agressivo" id="q2c">
+      <label for="q2c">Longo prazo (5+ anos)</label>
+    </div>
 
-<div class="divider"></div>
-<h3 class="section-h3">📉 Gráficos</h3>
-<a href="https://www.tradingview.com/" target="_blank" class="resource-link"><span class="rl-icon">📈</span><div><div class="rl-type">Freemium</div><div class="rl-title">TradingView</div><div class="rl-desc">Melhor plataforma de gráficos. Indicadores, alertas, comunidade.</div></div></a>
-<a href="https://br.advfn.com/" target="_blank" class="resource-link"><span class="rl-icon">🌐</span><div><div class="rl-type">Gratuito</div><div class="rl-title">ADVFN Brasil</div><div class="rl-desc">Cotações, gráficos, listas e dicionário num só lugar.</div></div></a>
+    <h3 class="section-h3" style="margin-top:24px">Pergunta 3: Sua experiência?</h3>
+    <div class="quiz-option">
+      <input type="radio" name="q3" value="conservador" id="q3a">
+      <label for="q3a">Iniciante, nunca investi</label>
+    </div>
+    <div class="quiz-option">
+      <input type="radio" name="q3" value="moderado" id="q3b">
+      <label for="q3b">Intermediário, já investi antes</label>
+    </div>
+    <div class="quiz-option">
+      <input type="radio" name="q3" value="agressivo" id="q3c">
+      <label for="q3c">Avançado, sou trader ativo</label>
+    </div>
 
-<div class="divider"></div>
-<h3 class="section-h3">📋 Controle de IR e Carteira</h3>
-<a href="https://www.gorila.com.br/" target="_blank" class="resource-link"><span class="rl-icon">🦍</span><div><div class="rl-type">Gratuito</div><div class="rl-title">Gorila Invest</div><div class="rl-desc">Consolida carteira, mostra rentabilidade real e ajuda no IR.</div></div></a>
-
-<div class="divider"></div>
-<h3 class="section-h3">📰 Notícias e Info</h3>
-<a href="https://www.infomoney.com.br/" target="_blank" class="resource-link"><span class="rl-icon">📰</span><div><div class="rl-type">Gratuito</div><div class="rl-title">InfoMoney</div><div class="rl-desc">Principal portal de mercado financeiro BR.</div></div></a>
-<a href="https://borainvestir.b3.com.br/" target="_blank" class="resource-link"><span class="rl-icon">🌐</span><div><div class="rl-type">Gratuito — B3</div><div class="rl-title">Bora Investir</div><div class="rl-desc">Portal educacional oficial da B3.</div></div></a>
-<a href="https://www.gov.br/investidor/pt-br" target="_blank" class="resource-link"><span class="rl-icon">🏛️</span><div><div class="rl-type">Gov</div><div class="rl-title">Portal do Investidor (CVM)</div><div class="rl-desc">Guias oficiais sobre seus direitos.</div></div></a>
-
-<div class="divider"></div>
-<h3 class="section-h3">📱 Apps</h3>
-<a href="https://edu.b3.com.br/" target="_blank" class="resource-link"><span class="rl-icon">📱</span><div><div class="rl-type">App — B3</div><div class="rl-title">HUB3</div><div class="rl-desc">Consolida carteira, cotações, cursos e webcasts da B3.</div></div></a>
+    <button onclick="calcularPerfil()" style="width:100%;padding:12px;background:var(--accent);color:#fff;border:none;border-radius:8px;font-weight:700;cursor:pointer;margin-top:20px">Ver Meu Perfil</button>
+    <div id="resultadoPerfil"></div>
+  </div>
 </div>
 
-<!-- 8. DICAS -->
+<!-- 6. CALENDÁRIO DE EVENTOS -->
+<div class="section" id="calendario">
+  <div class="section-label">Planejamento</div>
+  <h2>Calendário de Eventos Importantes</h2>
+  <p class="section-intro">Datas que impactam o mercado. Fique atento!</p>
 
+  <div class="card">
+    <h3 class="section-h3">📅 2026 - Eventos Principais</h3>
+    
+    <div class="event-item">
+      <div class="date">Abril - Maio</div>
+      <h4>Resultado de Empresas (Earnings)</h4>
+      <p>Empresas divulgam seus resultados trimestrais. Volatilidade alta nestes períodos.</p>
+    </div>
+
+    <div class="event-item">
+      <div class="date">Junho</div>
+      <h4>Pagamento de Dividendos</h4>
+      <p>Muitas empresas pagam dividendos semestrais. Ótima oportunidade para renda passiva.</p>
+    </div>
+
+    <div class="event-item">
+      <div class="date">Julho - Agosto</div>
+      <h4>Recesso de Verão (Exterior)</h4>
+      <p>Mercados internacionais em recesso. Bolsa brasileira pode ter menos liquidez.</p>
+    </div>
+
+    <div class="event-item">
+      <div class="date">Setembro</div>
+      <h4>Decisão de Juros (Copom)</h4>
+      <p>Banco Central decide sobre taxa de juros. Impacta toda a bolsa.</p>
+    </div>
+
+    <div class="event-item">
+      <div class="date">Outubro - Novembro</div>
+      <h4>Eleições (Próximas)</h4>
+      <p>Períodos eleitorais geram incerteza. Mercado fica mais volátil.</p>
+    </div>
+
+    <div class="event-item">
+      <div class="date">Dezembro</div>
+      <h4>Encerramento do Ano</h4>
+      <p>Muitos investidores "realizam" ganhos. Volatilidade no final do ano.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 7. COMPARATIVO DE CORRETORAS -->
+<div class="section" id="comparativo">
+  <div class="section-label">Escolha</div>
+  <h2>Comparativo de Corretoras</h2>
+  <p class="section-intro">Veja as principais corretoras e suas características.</p>
+
+  <div class="card">
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Corretora</th>
+          <th>Taxa de Corretagem</th>
+          <th>Conta Mínima</th>
+          <th>Melhor Para</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Nubank</strong></td>
+          <td>Isenta</td>
+          <td>R$ 1</td>
+          <td>Iniciantes, operações frequentes</td>
+        </tr>
+        <tr>
+          <td><strong>XP Investimentos</strong></td>
+          <td>Isenta</td>
+          <td>R$ 1</td>
+          <td>Operadores ativos, day traders</td>
+        </tr>
+        <tr>
+          <td><strong>Rico</strong></td>
+          <td>Isenta</td>
+          <td>R$ 1</td>
+          <td>Traders com volume alto</td>
+        </tr>
+        <tr>
+          <td><strong>Toro</strong></td>
+          <td>Isenta</td>
+          <td>R$ 1</td>
+          <td>Iniciantes, educação</td>
+        </tr>
+        <tr>
+          <td><strong>Inter</strong></td>
+          <td>Isenta</td>
+          <td>R$ 1</td>
+          <td>Clientes do banco Inter</td>
+        </tr>
+        <tr>
+          <td><strong>Bradesco</strong></td>
+          <td>Isenta</td>
+          <td>R$ 1</td>
+          <td>Clientes do banco Bradesco</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="alert info">
+    <div class="alert-icon">ℹ️</div>
+    <div><strong>Dica:</strong> A maioria das corretoras não cobra taxa de corretagem mais. Escolha pela facilidade de uso e suporte ao cliente.</div>
+  </div>
+</div>
+
+<!-- 8. ANÁLISE DE CASOS REAIS -->
+<div class="section" id="casos">
+  <div class="section-label">Aprendizado</div>
+  <h2>Análise de Casos Reais</h2>
+  <p class="section-intro">Histórias de sucesso e fracasso para você aprender.</p>
+
+  <div class="card">
+    <div class="case-study">
+      <h4>📈 Caso 1: João - Sucesso com Buy & Hold</h4>
+      <div class="result"><strong>Resultado:</strong> +340% em 8 anos</div>
+      <p><strong>Estratégia:</strong> Comprou ações de empresas grandes (Petrobras, Vale, Itaú) em 2016 e manteve até 2024. Reinvestiu todos os dividendos.</p>
+      <div class="lesson">💡 Lição: Paciência e reinvestimento de dividendos geram riqueza a longo prazo.</div>
+    </div>
+
+    <div class="case-study">
+      <h4>📉 Caso 2: Maria - Fracasso com Day Trade</h4>
+      <div class="result"><strong>Resultado:</strong> -45% em 6 meses</div>
+      <p><strong>Estratégia:</strong> Tentou fazer day trade sem experiência. Comprava e vendia várias vezes ao dia, perdendo dinheiro em taxas e decisões emocionais.</p>
+      <div class="lesson">💡 Lição: Day trade é para profissionais. Iniciantes devem evitar.</div>
+    </div>
+
+    <div class="case-study">
+      <h4>📊 Caso 3: Pedro - Sucesso com Dividendos</h4>
+      <div class="result"><strong>Resultado:</strong> R$ 50 mil em renda passiva anual</div>
+      <p><strong>Estratégia:</strong> Investiu R$ 500 mil em ações que pagam dividendos altos (Banco do Brasil, Caixa, Eletrobras). Vive dos dividendos.</p>
+      <div class="lesson">💡 Lição: Renda passiva é possível com disciplina e paciência.</div>
+    </div>
+
+    <div class="case-study">
+      <h4>⚠️ Caso 4: Ana - Golpe de Investimento</h4>
+      <div class="result"><strong>Resultado:</strong> -100% (perdeu tudo)</div>
+      <p><strong>Estratégia:</strong> Caiu em golpe de "guru de investimento" que prometia 50% ao mês. Perdeu R$ 20 mil.</p>
+      <div class="lesson">💡 Lição: Se parece bom demais para ser verdade, é golpe. Desconfie!</div>
+    </div>
+  </div>
+</div>
+
+<!-- 9. ROADMAP DE APRENDIZADO -->
+<div class="section" id="roadmap">
+  <div class="section-label">Progressão</div>
+  <h2>Seu Roadmap de Aprendizado</h2>
+  <p class="section-intro">Siga este caminho para dominar o mercado de ações.</p>
+
+  <div class="card">
+    <div class="roadmap-step" data-step="1">
+      <h4>Mês 1-2: Fundamentos</h4>
+      <p>Aprenda o básico: o que é ação, como funciona a bolsa, tipos de investimento.</p>
+      <div class="time">2 meses</div>
+    </div>
+
+    <div class="roadmap-step" data-step="2">
+      <h4>Mês 3: Abra Sua Conta</h4>
+      <p>Escolha uma corretora, abra conta e faça seu primeiro investimento (mesmo que pequeno).</p>
+      <div class="time">1 mês</div>
+    </div>
+
+    <div class="roadmap-step" data-step="3">
+      <h4>Mês 4-6: Prática com Pequenas Quantias</h4>
+      <p>Invista pouco e observe. Aprenda a ler gráficos e entender notícias do mercado.</p>
+      <div class="time">3 meses</div>
+    </div>
+
+    <div class="roadmap-step" data-step="4">
+      <h4>Mês 7-9: Análise Fundamentalista</h4>
+      <p>Aprenda a analisar balanços de empresas. Escolha ações com base em fundamentos.</p>
+      <div class="time">3 meses</div>
+    </div>
+
+    <div class="roadmap-step" data-step="5">
+      <h4>Mês 10-12: Diversificação</h4>
+      <p>Distribua seu investimento em vários setores. Reduza risco com diversificação.</p>
+      <div class="time">3 meses</div>
+    </div>
+
+    <div class="roadmap-step" data-step="6">
+      <h4>Ano 2+: Estratégias Avançadas</h4>
+      <p>Explore: análise técnica, opções, fundos imobiliários, renda fixa. Escolha sua especialidade.</p>
+      <div class="time">Contínuo</div>
+    </div>
+  </div>
+
+  <div class="alert success">
+    <div class="alert-icon">✅</div>
+    <div><strong>Lembre-se:</strong> Não há pressa. Investimento é maratona, não sprint. Foque em aprender e construir riqueza gradualmente.</div>
+  </div>
+</div>
+
+<!-- 10. DICAS DE OURO -->
 <div class="section" id="dicas">
-<div class="section-label">Experiência</div><h2>💡 Dicas de Ouro</h2>
-<p class="section-intro">Gabriel, essas dicas valem mais que muitos cursos pagos.</p>
-<div class="level-indicator"><div class="level-dot filled"></div><div class="level-dot filled"></div><div class="level-dot filled"></div><div class="level-dot filled"></div><div class="level-dot filled"></div></div>
+  <div class="section-label">Sabedoria</div>
+  <h2>10 Dicas de Ouro</h2>
+  <p class="section-intro">Conselhos práticos que vão acelerar seu aprendizado.</p>
 
-<div class="tip-card"><span class="tip-num">1</span><h4>Nunca invista o que não pode perder</h4><p>Bolsa = dinheiro que sobra. Reserva de emergência primeiro.</p></div>
-<div class="tip-card"><span class="tip-num">2</span><h4>Não siga "dicas quentes" de grupos</h4><p>Se alguém promete "ação que vai subir 300%", desconfie. Estude você mesmo.</p></div>
-<div class="tip-card"><span class="tip-num">3</span><h4>Simulador primeiro — mínimo 30 dias</h4><p>Erre com dinheiro fictício. O mercado estará lá quando você estiver pronto.</p></div>
-<div class="tip-card"><span class="tip-num">4</span><h4>Diversifique SEMPRE</h4><p>Nunca todo dinheiro numa ação, setor ou tipo de ativo.</p></div>
-<div class="tip-card"><span class="tip-num">5</span><h4>Tenha um plano antes de comprar</h4><p>Por que comprar? Qual alvo de lucro? Qual limite de perda (stop)?</p></div>
-<div class="tip-card"><span class="tip-num">6</span><h4>Cuidado com alavancagem</h4><p>Multiplica ganhos E perdas. Iniciantes devem evitar totalmente.</p></div>
-<div class="tip-card"><span class="tip-num">7</span><h4>Não tente "acertar o fundo"</h4><p>Nem profissionais conseguem. Compre boas empresas a preços razoáveis e tenha paciência.</p></div>
-<div class="tip-card"><span class="tip-num">8</span><h4>Aporte mensal fixo</h4><p>"Preço médio" reduz impacto da volatilidade. A estratégia mais poderosa para o longo prazo.</p></div>
-<div class="tip-card"><span class="tip-num">9</span><h4>Aprenda a perder</h4><p>Perdas fazem parte. Gestão de risco: máximo 1-2% do capital por operação.</p></div>
-<div class="tip-card"><span class="tip-num">10</span><h4>Paciência é a habilidade nº1</h4><p>Warren Buffett construiu 99% da fortuna depois dos 50 anos. Juros compostos + tempo = magia.</p></div>
+  <div class="tip-card">
+    <span class="tip-num">1</span>
+    <h4>Comece pequeno</h4>
+    <p>Não invista tudo de uma vez. Comece com R$ 100-500 e vá aumentando conforme aprende.</p>
+  </div>
 
-<div class="alert pink"><span class="alert-icon">💎</span><div><strong>Mentalidade:</strong> Não é sobre ficar rico rápido. É construir patrimônio consistente ao longo de anos.</div></div>
-</div>
+  <div class="tip-card">
+    <span class="tip-num">2</span>
+    <h4>Tenha um plano</h4>
+    <p>Defina seus objetivos: quanto quer ganhar, em quanto tempo, qual seu perfil de risco.</p>
+  </div>
 
-<!-- 9. CURSOS -->
+  <div class="tip-card">
+    <span class="tip-num">3</span>
+    <h4>Diversifique</h4>
+    <p>Não coloque tudo em uma ação. Distribua entre vários setores e tipos de investimento.</p>
+  </div>
 
-<div class="section" id="cursos">
-<div class="section-label">Educação</div><h2>🎓 Cursos Gratuitos com Certificado</h2>
-<p class="section-intro">Plataformas oficiais — estude do básico ao avançado sem pagar nada.</p>
-<div class="level-indicator"><div class="level-dot filled"></div><div class="level-dot filled"></div><div class="level-dot filled"></div><div class="level-dot filled"></div><div class="level-dot"></div></div>
+  <div class="tip-card">
+    <span class="tip-num">4</span>
+    <h4>Ignore o ruído</h4>
+    <p>Não siga "dicas" de amigos ou redes sociais. Faça sua própria análise.</p>
+  </div>
 
-<a href="https://edu.b3.com.br/" target="_blank" class="resource-link"><span class="rl-icon">🏛️</span><div><div class="rl-type">Gratuito + Certificado</div><div class="rl-title">B3 Educação — 130+ cursos</div><div class="rl-desc">Trilhas do básico ao avançado. Finanças pessoais, ações, day trade, cripto. Certificado da B3.</div></div></a>
-<a href="https://cursos.cvm.gov.br/" target="_blank" class="resource-link"><span class="rl-icon">🏛️</span><div><div class="rl-type">Gratuito + Certificado</div><div class="rl-title">CVM Educacional</div><div class="rl-desc">Cursos do órgão regulador. Profissionais com formação acadêmica sólida.</div></div></a>
-<a href="https://borainvestir.b3.com.br/" target="_blank" class="resource-link"><span class="rl-icon">🌐</span><div><div class="rl-type">Gratuito</div><div class="rl-title">Bora Investir — Hub B3</div><div class="rl-desc">Guias, artigos, vídeos e webcasts sobre todos os produtos da B3.</div></div></a>
-<a href="https://www.tesourodireto.com.br/como-investir/" target="_blank" class="resource-link"><span class="rl-icon">🏛️</span><div><div class="rl-type">Gratuito — Gov</div><div class="rl-title">Tesouro Direto — Guia</div><div class="rl-desc">Guia oficial para títulos públicos. Essencial para reserva de emergência.</div></div></a>
+  <div class="tip-card">
+    <span class="tip-num">5</span>
+    <h4>Controle emoções</h4>
+    <p>Medo e ganância são seus piores inimigos. Mantenha a calma nas altas e baixas.</p>
+  </div>
 
-<div class="divider"></div>
-<h3 class="section-h3">🗺️ Trilha de Aprendizagem Sugerida</h3>
-<div class="card">
-<div class="step-item"><span class="step-number">1</span><div class="step-content"><h4>Mês 1-2: Fundamentos</h4><p>Cursos na B3 Educação + CVM. O básico: ações, renda fixa vs variável, Bolsa.</p></div></div>
-<div class="step-item"><span class="step-number">2</span><div class="step-content"><h4>Mês 2-3: Simuladores</h4><p>Praticar no Vexter ou ADVFN. Comprar/vender fictício. Sentir o ritmo.</p></div></div>
-<div class="step-item"><span class="step-number">3</span><div class="step-content"><h4>Mês 3-4: Análise básica</h4><p>Indicadores no Status Invest. Entender P/L, ROE, DY. Analisar empresas.</p></div></div>
-<div class="step-item"><span class="step-number">4</span><div class="step-content"><h4>Mês 4-5: Primeiro dinheiro real</h4><p>Corretora aberta. ETFs (BOVA11) ou blue chips com R$100-300.</p></div></div>
-<div class="step-item"><span class="step-number">5</span><div class="step-content"><h4>Mês 6+: Evolução</h4><p>TradingView para gráficos. Diversificar com FIIs. Swing trade. Livros.</p></div></div>
-</div>
-</div>
+  <div class="tip-card">
+    <span class="tip-num">6</span>
+    <h4>Estude sempre</h4>
+    <p>Leia livros, assista vídeos, faça cursos. O mercado muda, você precisa acompanhar.</p>
+  </div>
 
-<!-- 10. RECURSOS -->
+  <div class="tip-card">
+    <span class="tip-num">7</span>
+    <h4>Reinvista dividendos</h4>
+    <p>Não gaste os dividendos. Reinvista para aproveitar o poder dos juros compostos.</p>
+  </div>
 
-<div class="section" id="recursos">
-<div class="section-label">Material</div><h2>📚 Canais, Livros e Referências</h2>
-<div class="level-indicator"><div class="level-dot filled"></div><div class="level-dot filled"></div><div class="level-dot filled"></div><div class="level-dot filled"></div><div class="level-dot filled"></div></div>
+  <div class="tip-card">
+    <span class="tip-num">8</span>
+    <h4>Tenha paciência</h4>
+    <p>Riqueza é construída lentamente. Espere 5-10 anos para ver resultados reais.</p>
+  </div>
 
-<h3 class="section-h3">🟢 Iniciantes</h3>
-<a href="https://www.youtube.com/@mepoupe" target="_blank" class="resource-link"><span class="rl-icon">▶️</span><div><div class="rl-type">YouTube</div><div class="rl-title">Me Poupe! — Nathalia Arcuri</div><div class="rl-desc">Finanças pessoais e investimentos para quem começa do zero.</div></div></a>
-<a href="https://www.youtube.com/@oprimorico" target="_blank" class="resource-link"><span class="rl-icon">▶️</span><div><div class="rl-type">YouTube</div><div class="rl-title">O Primo Rico — Thiago Nigro</div><div class="rl-desc">Maior canal de investimentos do Brasil.</div></div></a>
-<a href="https://www.youtube.com/@investidorsardinha" target="_blank" class="resource-link"><span class="rl-icon">▶️</span><div><div class="rl-type">YouTube</div><div class="rl-title">Investidor Sardinha — Raul Sena</div><div class="rl-desc">Patrimônio no longo prazo, ações de valor e FIIs.</div></div></a>
+  <div class="tip-card">
+    <span class="tip-num">9</span>
+    <h4>Proteja seus dados</h4>
+    <p>Senha forte, 2FA, não clique em links suspeitos. Segurança é prioridade.</p>
+  </div>
 
-<div class="divider"></div><h3 class="section-h3">🟡 Intermediário</h3>
-<a href="https://www.youtube.com/@EconoMirna" target="_blank" class="resource-link"><span class="rl-icon">▶️</span><div><div class="rl-type">YouTube</div><div class="rl-title">Economirna</div><div class="rl-desc">Economia, macro e impacto nos investimentos.</div></div></a>
-<a href="https://www.youtube.com/@clubedovalor" target="_blank" class="resource-link"><span class="rl-icon">▶️</span><div><div class="rl-type">YouTube</div><div class="rl-title">Clube do Valor</div><div class="rl-desc">Análise fundamentalista profunda e investimento em valor.</div></div></a>
-
-<div class="divider"></div><h3 class="section-h3">🔴 Avançados</h3>
-<a href="https://www.youtube.com/@stormertrading" target="_blank" class="resource-link"><span class="rl-icon">▶️</span><div><div class="rl-type">YouTube</div><div class="rl-title">Stormer — Alexandre Wolwacz</div><div class="rl-desc">Referência em análise técnica no Brasil.</div></div></a>
-<a href="https://www.investopedia.com/" target="_blank" class="resource-link"><span class="rl-icon">📚</span><div><div class="rl-type">Inglês</div><div class="rl-title">Investopedia</div><div class="rl-desc">Maior enciclopédia de finanças do mundo.</div></div></a>
-
-<div class="divider"></div><h3 class="section-h3">📖 Livros</h3>
-<div class="card">
-<p><strong>🟢 Começar:</strong></p><ul><li>"Pai Rico, Pai Pobre" — Kiyosaki</li><li>"Do Mil ao Milhão" — Thiago Nigro</li><li>"Me Poupe!" — Nathalia Arcuri</li></ul>
-<p style="margin-top:12px"><strong>🟡 Evoluir:</strong></p><ul><li>"O Investidor Inteligente" — Graham</li><li>"Ações Comuns, Lucros Extraordinários" — Fisher</li><li>"O Jeito Warren Buffett" — Hagstrom</li></ul>
-<p style="margin-top:12px"><strong>🔴 Avançar:</strong></p><ul><li>"Análise Técnica dos Mercados" — Murphy</li><li>"Trading in the Zone" — Douglas</li><li>"A Random Walk Down Wall Street" — Malkiel</li></ul>
-</div>
-</div>
-
-<!-- 11. GLOSSÁRIO -->
-
-<div class="section" id="glossario">
-<div class="section-label">Referência</div><h2>📖 Glossário</h2>
-<div class="card">
-<div class="glossary-item"><div class="glossary-term">Ação</div><div class="glossary-def">Menor fração do capital de uma empresa.</div></div>
-<div class="glossary-item"><div class="glossary-term">Ação ON (3)</div><div class="glossary-def">Dá direito a voto. Ex: VALE3.</div></div>
-<div class="glossary-item"><div class="glossary-term">Ação PN (4)</div><div class="glossary-def">Prioridade em dividendos, sem voto. Ex: ITUB4.</div></div>
-<div class="glossary-item"><div class="glossary-term">Alavancagem</div><div class="glossary-def">Operar com mais do que tem. Multiplica ganhos E perdas.</div></div>
-<div class="glossary-item"><div class="glossary-term">B3</div><div class="glossary-def">Brasil, Bolsa, Balcão — única bolsa do Brasil.</div></div>
-<div class="glossary-item"><div class="glossary-term">Blue Chip</div><div class="glossary-def">Ação de empresa grande e consolidada.</div></div>
-<div class="glossary-item"><div class="glossary-term">Book de Ofertas</div><div class="glossary-def">Ordens de compra/venda pendentes com preço e quantidade.</div></div>
-<div class="glossary-item"><div class="glossary-term">Candlestick</div><div class="glossary-def">Gráfico "vela" com abertura, fechamento, máxima e mínima.</div></div>
-<div class="glossary-item"><div class="glossary-term">Circuit Breaker</div><div class="glossary-def">Para negociações quando Ibovespa cai +10% no dia.</div></div>
-<div class="glossary-item"><div class="glossary-term">Corretora</div><div class="glossary-def">Ponte entre você e a B3.</div></div>
-<div class="glossary-item"><div class="glossary-term">CVM</div><div class="glossary-def">Órgão regulador do mercado de capitais.</div></div>
-<div class="glossary-item"><div class="glossary-term">DARF</div><div class="glossary-def">Guia para pagar IR sobre lucros na Bolsa.</div></div>
-<div class="glossary-item"><div class="glossary-term">Dividendos</div><div class="glossary-def">Lucro distribuído aos acionistas.</div></div>
-<div class="glossary-item"><div class="glossary-term">ETF</div><div class="glossary-def">Fundo de índice negociado como ação. BOVA11 = Ibovespa.</div></div>
-<div class="glossary-item"><div class="glossary-term">FII</div><div class="glossary-def">Fundo Imobiliário com rendimentos de aluguéis.</div></div>
-<div class="glossary-item"><div class="glossary-term">Home Broker</div><div class="glossary-def">Plataforma online para comprar/vender ativos.</div></div>
-<div class="glossary-item"><div class="glossary-term">Ibovespa</div><div class="glossary-def">Principal índice da B3.</div></div>
-<div class="glossary-item"><div class="glossary-term">IPO</div><div class="glossary-def">Empresa abre capital e vende ações pela 1ª vez.</div></div>
-<div class="glossary-item"><div class="glossary-term">Liquidez</div><div class="glossary-def">Facilidade de transformar ativo em dinheiro.</div></div>
-<div class="glossary-item"><div class="glossary-term">Lote Fracionário</div><div class="glossary-def">Compra de 1 a 99 ações (ticker + F).</div></div>
-<div class="glossary-item"><div class="glossary-term">P/L</div><div class="glossary-def">Preço/Lucro — anos de lucro para "pagar" a ação.</div></div>
-<div class="glossary-item"><div class="glossary-term">Paper Trading</div><div class="glossary-def">Simulação com dinheiro fictício.</div></div>
-<div class="glossary-item"><div class="glossary-term">Renda Variável</div><div class="glossary-def">Retorno não previsível (ações, FIIs, ETFs).</div></div>
-<div class="glossary-item"><div class="glossary-term">Stop Loss</div><div class="glossary-def">Venda automática ao atingir limite de perda.</div></div>
-<div class="glossary-item"><div class="glossary-term">Tape Reading</div><div class="glossary-def">Leitura do fluxo de ordens para antecipar movimentos.</div></div>
-<div class="glossary-item"><div class="glossary-term">Ticker</div><div class="glossary-def">Código da ação (PETR4, VALE3, BOVA11).</div></div>
-<div class="glossary-item"><div class="glossary-term">Volatilidade</div><div class="glossary-def">Intensidade das oscilações de preço.</div></div>
-</div>
+  <div class="tip-card">
+    <span class="tip-num">10</span>
+    <h4>Comece hoje</h4>
+    <p>Não espere o momento "perfeito". O melhor momento para investir é sempre hoje.</p>
+  </div>
 </div>
 
 </div>
 
 <footer>
-<p>Guia elaborado para <strong>Gabriel</strong> com fins educacionais. Não constitui recomendação de investimento.</p>
-<p style="margin-top:4px">Consulte um profissional certificado antes de investir. Abril/2026.</p>
+  <p>© 2026 Gabriel — Bolsa de Valores. Guia educacional. Não é recomendação de investimento.</p>
+  <p>Para dúvidas, consulte um consultor financeiro certificado.</p>
 </footer>
 
 <script>
-function showSection(id){
-document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
-document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));
-document.getElementById(id).classList.add('active');
-event.target.classList.add('active');
-window.scrollTo({top:document.querySelector('.nav-tabs').offsetTop,behavior:'smooth'});
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  event.target.classList.add('active');
+  window.scrollTo({top:document.querySelector('.nav-tabs').offsetTop,behavior:'smooth'});
+}
+
+function calcularLucro() {
+  const compra = parseFloat(document.getElementById('precoCompra').value);
+  const venda = parseFloat(document.getElementById('precoVenda').value);
+  const qtd = parseInt(document.getElementById('quantidade').value);
+  const taxa = parseFloat(document.getElementById('taxa').value) || 0;
+  
+  if (!compra || !venda || !qtd) {
+    document.getElementById('resultadoLucro').innerHTML = '<div class="alert warning"><div class="alert-icon">⚠️</div><div>Preencha todos os campos</div></div>';
+    return;
+  }
+  
+  const lucro = ((venda - compra) * qtd) - taxa;
+  const percentual = ((venda - compra) / compra * 100).toFixed(2);
+  const cor = lucro >= 0 ? 'success' : 'warning';
+  
+  document.getElementById('resultadoLucro').innerHTML = `
+    <div class="calc-result">
+      <h4>Resultado</h4>
+      <div class="value" style="color:${lucro >= 0 ? 'var(--accent)' : 'var(--danger)'}">${lucro >= 0 ? '+' : ''}R$ ${lucro.toFixed(2)}</div>
+      <p style="margin-top:8px;font-size:12px">${percentual}% (${percentual >= 0 ? 'Ganho' : 'Perda'})</p>
+    </div>
+  `;
+}
+
+function calcularDividendos() {
+  const invest = parseFloat(document.getElementById('investimento').value);
+  const div = parseFloat(document.getElementById('dividendo').value) / 100;
+  const anos = parseInt(document.getElementById('periodo').value);
+  const reinv = parseFloat(document.getElementById('reinvestimento').value) / 100;
+  
+  if (!invest || !anos) {
+    document.getElementById('resultadoDividendos').innerHTML = '<div class="alert warning"><div class="alert-icon">⚠️</div><div>Preencha todos os campos</div></div>';
+    return;
+  }
+  
+  let total = invest;
+  let dividendosTotal = 0;
+  
+  for (let i = 0; i < anos; i++) {
+    const divAnual = total * div;
+    dividendosTotal += divAnual;
+    total += divAnual * reinv;
+  }
+  
+  document.getElementById('resultadoDividendos').innerHTML = `
+    <div class="calc-result">
+      <h4>Após ${anos} ano(s)</h4>
+      <div class="value">R$ ${total.toFixed(2)}</div>
+      <p style="margin-top:8px;font-size:12px">Dividendos: R$ ${dividendosTotal.toFixed(2)}</p>
+    </div>
+  `;
+}
+
+function calcularPerfil() {
+  const q1 = document.querySelector('input[name="q1"]:checked')?.value;
+  const q2 = document.querySelector('input[name="q2"]:checked')?.value;
+  const q3 = document.querySelector('input[name="q3"]:checked')?.value;
+  
+  if (!q1 || !q2 || !q3) {
+    document.getElementById('resultadoPerfil').innerHTML = '<div class="alert warning"><div class="alert-icon">⚠️</div><div>Responda todas as perguntas</div></div>';
+    return;
+  }
+  
+  const perfis = {conservador: 0, moderado: 0, agressivo: 0};
+  perfis[q1]++;
+  perfis[q2]++;
+  perfis[q3]++;
+  
+  let resultado = Object.keys(perfis).reduce((a, b) => perfis[a] > perfis[b] ? a : b);
+  
+  const descricoes = {
+    conservador: {titulo: '🛡️ Conservador', desc: 'Você prefere segurança. Invista em ações blue chip, fundos de renda fixa e dividendos. Evite riscos altos.'},
+    moderado: {titulo: '⚖️ Moderado', desc: 'Você busca equilíbrio. Misture ações, fundos e renda fixa. Aceita risco moderado para ganhos maiores.'},
+    agressivo: {titulo: '🚀 Agressivo', desc: 'Você quer máximo retorno. Pode explorar day trade, ações de crescimento e derivativos. Aceita perdas potenciais.'}
+  };
+  
+  const d = descricoes[resultado];
+  document.getElementById('resultadoPerfil').innerHTML = `
+    <div class="result-box">
+      <h3>${d.titulo}</h3>
+      <p>${d.desc}</p>
+    </div>
+  `;
 }
 </script>
 
-</body>
-</html>
+<!-- Scripts de IA com OpenRouter + GPT-3.5 -->
+<script src="supabase-config.js"></script>
+<script src="ai-assistant.js"></script>
+<script src="ai-features.js"></script>
+<script src="ai-chat-widget.js"></script>
+
+<!-- PWA Service Worker Registration -->
 <script>
-function showSection(sectionId) {
-  // Ocultar todas as seções
-  const sections = document.querySelectorAll('.section');
-  sections.forEach(section => section.classList.remove('active'));
-  
-  // Remover classe active de todos os tabs
-  const tabs = document.querySelectorAll('.nav-tab');
-  tabs.forEach(tab => tab.classList.remove('active'));
-  
-  // Mostrar seção selecionada
-  const selectedSection = document.getElementById(sectionId);
-  if (selectedSection) {
-    selectedSection.classList.add('active');
-  }
-  
-  // Marcar tab como ativo
-  event.target.classList.add('active');
-  
-  // Scroll para o topo
-  window.scrollTo(0, 0);
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('service-worker.js')
+      .then(registration => {
+        console.log('Service Worker registrado com sucesso:', registration);
+        
+        // Verificar atualizações periodicamente
+        setInterval(() => {
+          registration.update();
+        }, 60000); // A cada 1 minuto
+      })
+      .catch(error => {
+        console.error('Erro ao registrar Service Worker:', error);
+      });
+  });
 }
+
+// Detectar quando uma nova versão está disponível
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    console.log('Nova versão do app disponível!');
+    // Opcional: mostrar notificação ao usuário
+  });
+}
+
+// Instalar prompt (Android)
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  console.log('App pode ser instalado');
+  // Opcional: mostrar botão de instalar
+});
 </script>
+
 </body>
 </html>
