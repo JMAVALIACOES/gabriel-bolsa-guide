@@ -330,18 +330,48 @@ class AIChatWidget {
       }
 
       /* Responsivo */
-      @media (max-width: 480px) {
+      @media (max-width: 768px) {
+        .ai-chat-widget {
+          bottom: 16px;
+          right: 16px;
+        }
+
+        .ai-chat-toggle {
+          width: 48px;
+          height: 48px;
+        }
+
         .ai-chat-window {
+          position: fixed;
           width: calc(100vw - 32px);
-          height: 70vh;
+          height: calc(100vh - 120px);
+          max-height: 600px;
           bottom: 80px;
           right: 16px;
           left: 16px;
+          top: auto;
+          z-index: 10000;
         }
 
         .ai-message-content,
         .user-message-content {
           max-width: 85%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .ai-chat-window {
+          width: calc(100vw - 24px);
+          height: calc(100vh - 100px);
+          max-height: 500px;
+          bottom: 70px;
+          right: 12px;
+          left: 12px;
+        }
+
+        .ai-chat-toggle {
+          width: 50px;
+          height: 50px;
         }
       }
     `;
