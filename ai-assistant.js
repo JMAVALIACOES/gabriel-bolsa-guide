@@ -3,7 +3,7 @@
 
 class AIAssistant {
   constructor() {
-    this.apiKey = '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';
+    this.apiKey = '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';
     this.model = 'openai/gpt-3.5-turbo';
     this.baseUrl = 'https://openrouter.ai/api/v1';
     this.conversationHistory = [];
