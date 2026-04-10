@@ -3,9 +3,8 @@
 
 class AIAssistant {
   constructor() {
-    this.apiKey = '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';
+    this.proxyUrl = 'https://mjiqgfozmjohqheyoaby.supabase.co/functions/v1/openrouter-proxy';
     this.model = 'openai/gpt-3.5-turbo';
-    this.baseUrl = 'https://openrouter.ai/api/v1';
     this.conversationHistory = [];
     this.isLoading = false;
   }
@@ -35,10 +34,10 @@ Responda em português brasileiro, de forma amigável e profissional.`;
 
   // Enviar mensagem para GPT-3.5 via OpenRouter
   async sendMessage(userMessage, userProfile = null) {
-    if (!this.apiKey) {
-      console.error('Chave OpenRouter não configurada');
+    if (!this.proxyUrl) {
+      console.error('Proxy não configurado');
       return {
-        error: 'Assistente IA não configurado. Por favor, configure a chave OpenRouter.',
+        error: 'Assistente IA não configurado.',
       };
     }
 
@@ -60,14 +59,11 @@ Responda em português brasileiro, de forma amigável e profissional.`;
       // Manter apenas as últimas 10 mensagens para economizar tokens
       const messages = this.conversationHistory.slice(-10);
 
-      // Fazer requisição para OpenRouter
-      const response = await fetch(`${this.baseUrl}/chat/completions`, {
+      // Fazer requisição via proxy seguro (Supabase Edge Function)
+      const response = await fetch(this.proxyUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${this.apiKey}`,
-          'HTTP-Referer': window.location.origin,
-          'X-Title': 'Gabriel da Bolsa',
         },
         body: JSON.stringify({
           model: this.model,
